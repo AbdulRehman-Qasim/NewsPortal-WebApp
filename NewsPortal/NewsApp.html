@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="main-nav container flex">
+            <!-- Logo & Site Name -->
+            <a href="#" onclick="reload()" class="logo-section flex">
+                <span class="site-name">NewsPortal</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="nav-item" id="home" onclick="onNavItemClick('Pakistan')">Home</li>
+
+                    <!-- Dropdown for Categories -->
+                    <li class="nav-item dropdown">
+                        Categories &#9662;
+                        <ul class="dropdown-menu">
+                            <li onclick="onNavItemClick('ipl')">Business</li>
+                            <li onclick="onNavItemClick('finance')">Finance</li>
+                            <li onclick="onNavItemClick('politics')">Politics</li>
+                            <li onclick="onNavItemClick('technology')">Technology</li>
+                            <li onclick="onNavItemClick('health')">Health</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="Search news...">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FEATURED NEWS -->
+    <section class="featured-news container" id="featured-news">
+        <!-- Featured slides will be injected dynamically via JS -->
+    </section>
+
+    <!-- NEWS CARDS -->
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            <!-- News cards injected dynamically via JS -->
+        </div>
+    </main>
+
+    <!-- NEWS CARD TEMPLATE -->
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" class="news-img">
+                <span class="news-category">Category</span>
+            </div>
+            <div class="card-content">
+                <h3 class="news-title">This is the Title</h3>
+                <h6 class="news-source">Source 26/08/2023</h6>
+                <p class="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
